@@ -1,4 +1,4 @@
-# VinAgent Development Environment
+# Development Environment
 
 This repository provides the development environment setup for **VinAgent**.  
 It includes:
