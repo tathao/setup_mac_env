@@ -1,0 +1,43 @@
+name: vinagent-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11          # Cố định version để reproducible
+  - pip
+  - jupyterlab
+  - ipykernel            # Dùng ipykernel từ conda (loại bỏ duplicate trong pip)
+  - pyright
+  - numpy=1.26.4
+  - pandas=2.2.3
+  - matplotlib=3.7.1
+  - plotly=5.22.0
+  - mlflow               # Có sẵn trên conda-forge
+  - postgresql           # Nếu cần driver PostgreSQL client
+  - redis                # Python redis client (ưu tiên conda nếu có)
+  - pip:
+      - langchain-core==0.3.74
+      - langchain-openai==0.3.7
+      - langchain-together==0.3.0
+      - langchain-groq==0.3.7
+      - arxiv==2.2.0
+      - langgraph==0.4.7
+      - python-dotenv==1.0.0
+      - "aucodb[graphs]==0.1.7"       # Quote extras để tránh YAML parse lỗi
+      - mcp==1.9.0
+      - mlflow-skinny==3.1.0         # Nếu cần bản gọn của mlflow
+      - alpha_vantage==3.0.0
+      - tavily-python>=0.3.1
+      - pre-commit>=3.7.1
+      - black>=24.4.2
+      - pytest>=8.2.2
+      - pytest-cov>=6.0.0
+      - "fastapi[all]>=0.103.0"
+      - uvicorn>=0.28.0
+      - RestrictedPython
+      - pyvis==0.3.2
+      - together==1.5.21
+      - grog==0.93
+      - neo4j        
+      - loguru==0.7.3          # nếu không có trên conda-forge, giữ ở pip
+
