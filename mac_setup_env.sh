@@ -29,7 +29,12 @@ fi
 # 3. Install packages via Homebrew
 # -------------------------------
 echo "📦 Installing CLI tools and apps..."
-brew install node docker docker-compose colima ollama
+brew install node docker docker-buildx colima ollama
+
+mkdir -p ~/.docker/cli-plugins
+curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-darwin-$(uname -m | sed 's/x86_64/x86_64/;s/arm64/aarch64/') -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+
 brew install --cask miniforge visual-studio-code oracle-jdk zalo messenger omnissa-horizon-client
 
 # -------------------------------
