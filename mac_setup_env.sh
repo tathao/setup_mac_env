@@ -35,7 +35,7 @@ mkdir -p ~/.docker/cli-plugins
 curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-darwin-$(uname -m | sed 's/x86_64/x86_64/;s/arm64/aarch64/') -o ~/.docker/cli-plugins/docker-compose
 chmod +x ~/.docker/cli-plugins/docker-compose
 
-brew install --cask miniforge visual-studio-code oracle-jdk zalo messenger omnissa-horizon-client
+brew install --cask miniforge visual-studio-code oracle-jdk omnissa-horizon-client
 
 # -------------------------------
 # 4. Setup Conda (Miniforge)
