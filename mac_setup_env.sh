@@ -164,26 +164,26 @@ version: 1.0.0
 schema: v1
 
 models:
-  - name: deepseek-r1
+  - name: deepseek-r1:8b
     provider: ollama
-    model: deepseek-r1
+    model: deepseek-r1:8b
     roles:
       - chat
 
-  - name: deepseek-coder
+  - name: deepseek-coder:6.7b
     provider: ollama
-    model: deepseek-coder
+    model: deepseek-coder:6.7b
     roles:
       - autocomplete
       - edit
 
-  - name: qwen2.5-coder
+  - name: qwen2.5-coder:7b
     provider: ollama
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
     roles:
       - edit
 
-defaultModel: deepseek-r1
+defaultModel: deepseek-r1:8b
 
 context:
   - provider: code
@@ -218,71 +218,71 @@ customCommands:
       Fix bugs in this Spring Boot Java code.
       Apply best practices and explain your changes.
     type: edit
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
 
   - name: ⚙️ Generate FastAPI Endpoint
     prompt: |
       Generate a FastAPI endpoint with input validation, response model, and proper docstring.
     type: edit
-    model: deepseek-coder
+    model: deepseek-coder:6.7b
 
   - name: ♻️ Refactor React Component
     prompt: |
       Refactor this React (TypeScript) component to improve performance, readability, and type safety.
     type: edit
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
 
   - name: 📦 Generate Spring Boot Controller
     prompt: |
       Create a Spring Boot REST controller with request mappings, DTOs, and service injection.
     type: edit
-    model: deepseek-coder
+    model: deepseek-coder:6.7b
 
   - name: 🧠 Explain Code
     prompt: |
       Explain this code step by step, in plain language, for a junior developer to understand.
     type: edit
-    model: deepseek-r1
+    model: deepseek-r1:8b
 
   - name: 🧪 Generate FastAPI Test
     prompt: |
       Generate a Pytest test case for the FastAPI endpoint.
       Include test client, assertions, and sample inputs.
     type: edit
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
 
   - name: 🧾 Add Docstring (Python)
     prompt: |
       Add detailed docstrings to all functions and classes in this Python code, following Google or NumPy style.
     type: edit
-    model: deepseek-r1
+    model: deepseek-r1:8b
 
   - name: 🧾 Add Javadoc (Java)
     prompt: |
       Add complete Javadoc comments to all methods and classes in this Java code.
       Include description, parameters, return, and exceptions if applicable.
     type: edit
-    model: deepseek-r1
+    model: deepseek-r1:8b
 
   - name: 🧾 Generate OpenAPI from FastAPI
     prompt: |
       Analyze this FastAPI route and generate the corresponding OpenAPI path schema with models and examples.
     type: edit
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
 
   - name: ✅ Generate Unit Test
     prompt: |
       Write a unit test for this function or class in its respective language (Python, Java, or TypeScript).
       Use appropriate testing frameworks (pytest, JUnit, Jest).
     type: edit
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
 
   - name: ✅ Generate Integration Test (API)
     prompt: |
       Generate an integration test that validates full API behavior for this endpoint.
       Include setup, request, response validation, and teardown if necessary.
     type: edit
-    model: qwen2.5-coder
+    model: qwen2.5-coder:7b
 EOF
 
 echo "✅ Continue config created at ~/.continue/config.yaml"
