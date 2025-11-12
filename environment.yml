@@ -38,6 +38,8 @@ dependencies:
       - pyvis==0.3.2
       - together==1.5.21
       - grog==0.93
-      - neo4j        
+      - neo4j      
+      - mkdocs==1.6.1
+      - mkdocs-material==9.7.0
       - loguru==0.7.3          # nếu không có trên conda-forge, giữ ở pip
 
