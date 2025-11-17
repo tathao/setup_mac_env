@@ -42,4 +42,6 @@ dependencies:
       - mkdocs==1.6.1
       - mkdocs-material==9.7.0
       - loguru==0.7.3          # nếu không có trên conda-forge, giữ ở pip
+      - hvac==2.4.0
+      - keyring==25.7.0
 
